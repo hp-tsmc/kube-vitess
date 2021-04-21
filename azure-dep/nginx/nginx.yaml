@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-minikube-vitess
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.19.10
+        ports:
+        - containerPort: 80 # nginx validate port
+        - containerPort: 3306 # vtgate OLTP
+        - containerPort: 3316 # vtgate OLAP
+        - containerPort: 15000 # vtctld Dashboard
+        - containerPort: 15001 # vtgate Dashboard
+        - containerPort: 15999 # vtctld grpc
+        - containerPort: 16000 # vtgate grpc
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 100m
+            memory: 128Mi
+        volumeMounts:
+        - name: config
+          mountPath: "/etc/nginx/nginx.conf"
+          subPath: nginx.conf
+          readOnly: false
+      volumes:
+        # You set volumes at the Pod level, then mount them into containers inside that Pod
+        - name: config
+          configMap:
+            # Provide the name of the ConfigMap you want to mount.
+            name: nginx-config
+            # items:
+            # - key: nginx.conf
+            #   path: nginx.conf
