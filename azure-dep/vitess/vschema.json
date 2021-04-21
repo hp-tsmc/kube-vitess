@@ -1,0 +1,58 @@
+{
+    "sharded": true,
+    "vindexes": {
+        "md5": {
+            "type": "unicode_loose_md5"
+        }
+    },
+    "tables": {
+        "employees": {
+            "column_vindexes": [
+                {
+                    "column": "emp_no",
+                    "name": "md5"
+                }
+            ]
+        },
+        "departments": {
+            "column_vindexes": [
+                {
+                    "column": "dept_no",
+                    "name": "md5"
+                }
+            ]
+        },
+        "dept_manager": {
+            "column_vindexes": [
+                {
+                    "column": "emp_no",
+                    "name": "md5"
+                }
+            ]
+        },
+        "dept_emp": {
+            "column_vindexes": [
+                {
+                    "column": "emp_no",
+                    "name": "md5"
+                }
+            ]
+        },
+        "titles": {
+            "column_vindexes": [
+                {
+                    "column": "emp_no",
+                    "name": "md5"
+                }
+            ]
+        },
+        "salaries": {
+            "column_vindexes": [
+                {
+                    "column": "emp_no",
+                    "name": "md5"
+                }
+            ]
+        }
+    }
+}
