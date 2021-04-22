@@ -4,7 +4,7 @@
 function recreate_config(){
     echo "Recreate nginx-config"
     minikube kubectl -- delete configmap nginx-config
-    minikube kubectl -- create configmap nginx-config --from-file=config/nginx.conf
+    minikube kubectl -- create configmap nginx-config --from-file=azure-dep/nginx/config/nginx.conf
 }
 
 function recreate_nginx(){
