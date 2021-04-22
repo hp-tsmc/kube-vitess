@@ -57,7 +57,7 @@
         "TRX_CPO_CUST_ESCAL_MAST": {
             "column_vindexes": [
                 {
-                    "column": "PK_TRX_CPO_CUST_ESCAL_MAST",
+                    "column": "ESCAL_NO",
                     "name": "md5"
                 }
             ]
