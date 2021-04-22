@@ -142,7 +142,7 @@ spec:
                 requests:
                   storage: 2Gi
           - cell: zone2
-            type: replica
+            type: rdonly
             replicas: 2
             vttablet:
               extraFlags:
