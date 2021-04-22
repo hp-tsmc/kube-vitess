@@ -26,18 +26,40 @@ function deploy_operator(){
     minikube kubectl -- apply -f operator.yaml
 }
 
+# This can be cleaner with for loop and cut
+function update_nginx_config(){
+    global_vtgate=`minikube kubectl -- get service | grep azure-vtgate | awk '{print $1}'`
+    global_vtctld=`minikube kubectl -- get service | grep azure-vtctld | awk '{print $1}'`
+    zone1_vtgate=`minikube kubectl -- get service | grep azure-zone1-vtgate | awk '{print $1}'`   
+    zone2_vtgate=`minikube kubectl -- get service | grep azure-zone2-vtgate | awk '{print $1}'`
+    echo "${global_vtgate}"
+    echo "${global_vtctld}"
+    echo "${zone1_vtgate}"
+    echo "${zone2_vtgate}"
+    sed -i "s/azure-vtgate.*:3306/${global_vtgate}:3306/g" azure-dep/nginx/config/nginx.conf
+    sed -i "s/azure-vtgate.*:15000/${global_vtgate}:15000/g" azure-dep/nginx/config/nginx.conf
+    sed -i "s/azure-vtctld.*:15999/${global_vtctld}:15999/g" azure-dep/nginx/config/nginx.conf
+    sed -i "s/azure-vtctld.*:15000/${global_vtctld}:15000/g" azure-dep/nginx/config/nginx.conf
+    sed -i "s/azure-zone1-vtgate.*:3306/${zone1_vtgate}:3306/g" azure-dep/nginx/config/nginx.conf
+    sed -i "s/azure-zone2-vtgate.*:3306/${zone2_vtgate}:3306/g" azure-dep/nginx/config/nginx.conf
+}
+
+
 function main(){
     case $1 in
 
         test)
             echo "Hello"
             ;;
+
         deploy-operator)
             deploy_operator
-            ;;
+            ;; 
+
         deploy-nginx)
             deploy_nginx
             ;;
+
         recreate-config)
             recreate_config
             ;;
@@ -52,7 +74,10 @@ function main(){
             recreate_nginx
             echo "Done"
             ;;
-
+        update-nginx-config)
+           echo "Replacing names in nginx.conf"
+           update_nginx_config
+           echo "Done"
         *)
             echo "Following commands are available:"
             echo "recreate-config"
