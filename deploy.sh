@@ -78,6 +78,7 @@ function main(){
            echo "Replacing names in nginx.conf"
            update_nginx_config
            echo "Done"
+           ;;
         *)
             echo "Following commands are available:"
             echo "recreate-config"
