@@ -53,6 +53,15 @@
                     "name": "md5"
                 }
             ]
+        },
+        "TRX_CPO_CUST_ESCAL_MAST": {
+            "column_vindexes": [
+                {
+                    "column": "PK_TRX_CPO_CUST_ESCAL_MAST",
+                    "name": "md5"
+                }
+            ]
         }
+        
     }
 }
