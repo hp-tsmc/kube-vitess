@@ -1,7 +1,7 @@
 USE [BAP]
 GO
 
-/****** Object:  Table [BAP].[TRX_CPO_CUST_ESCAL_MAST]    Script Date: 2021/4/22 �W�� 09:23:28 ******/
+/****** Object:  Table [BAP].[TRX_CPO_CUST_ESCAL_MAST]   ******/
 SET ANSI_NULLS ON
 GO
 
