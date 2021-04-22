@@ -26,7 +26,8 @@
 -- CREATE DATABASE IF NOT EXISTS employees;
 -- USE employees;
 
-USE carrafour@MASTER;
+USE shard2@MASTER;
+--USE shard1
 
 SELECT 'CREATING DATABASE STRUCTURE' as 'INFO';
 
@@ -62,8 +63,8 @@ CREATE TABLE dept_manager (
    dept_no      CHAR(4)         NOT NULL,
    from_date    DATE            NOT NULL,
    to_date      DATE            NOT NULL,
-   FOREIGN KEY (emp_no)  REFERENCES employees (emp_no)    ON DELETE CASCADE,
-   FOREIGN KEY (dept_no) REFERENCES departments (dept_no) ON DELETE CASCADE,
+/*   FOREIGN KEY (emp_no)  REFERENCES employees (emp_no)    ON DELETE CASCADE,*/
+/*   FOREIGN KEY (dept_no) REFERENCES departments (dept_no) ON DELETE CASCADE,*/
    PRIMARY KEY (emp_no,dept_no)
 ); 
 
@@ -72,8 +73,8 @@ CREATE TABLE dept_emp (
     dept_no     CHAR(4)         NOT NULL,
     from_date   DATE            NOT NULL,
     to_date     DATE            NOT NULL,
-    FOREIGN KEY (emp_no)  REFERENCES employees   (emp_no)  ON DELETE CASCADE,
-    FOREIGN KEY (dept_no) REFERENCES departments (dept_no) ON DELETE CASCADE,
+/*    FOREIGN KEY (emp_no)  REFERENCES employees   (emp_no)  ON DELETE CASCADE,*/
+/*    FOREIGN KEY (dept_no) REFERENCES departments (dept_no) ON DELETE CASCADE,*/
     PRIMARY KEY (emp_no,dept_no)
 );
 
@@ -82,7 +83,7 @@ CREATE TABLE titles (
     title       VARCHAR(50)     NOT NULL,
     from_date   DATE            NOT NULL,
     to_date     DATE,
-    FOREIGN KEY (emp_no) REFERENCES employees (emp_no) ON DELETE CASCADE,
+/*    FOREIGN KEY (emp_no) REFERENCES employees (emp_no) ON DELETE CASCADE,*/
     PRIMARY KEY (emp_no,title, from_date)
 ) 
 ; 
@@ -92,11 +93,11 @@ CREATE TABLE salaries (
     salary      INT             NOT NULL,
     from_date   DATE            NOT NULL,
     to_date     DATE            NOT NULL,
-    FOREIGN KEY (emp_no) REFERENCES employees (emp_no) ON DELETE CASCADE,
+/*    FOREIGN KEY (emp_no) REFERENCES employees (emp_no) ON DELETE CASCADE,*/
     PRIMARY KEY (emp_no, from_date)
 ) 
 ; 
-
+/*
 CREATE OR REPLACE VIEW dept_emp_latest_date AS
     SELECT emp_no, MAX(from_date) AS from_date, MAX(to_date) AS to_date
     FROM dept_emp
@@ -108,8 +109,9 @@ CREATE OR REPLACE VIEW current_dept_emp AS
     FROM dept_emp d
         INNER JOIN dept_emp_latest_date l
         ON d.emp_no=l.emp_no AND d.from_date=l.from_date AND l.to_date = d.to_date;
-
+*/
 flush /*!50503 binary */ logs;
+
 
 SELECT 'LOADING departments' as 'INFO';
 source load_departments.dump ;
@@ -127,3 +129,4 @@ source load_salaries2.dump ;
 source load_salaries3.dump ;
 
 source show_elapsed.sql ;
+

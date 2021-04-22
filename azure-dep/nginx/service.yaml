@@ -4,6 +4,8 @@ metadata:
   name: nginx-minikube-service
 spec:
   type: LoadBalancer
+  externalIPs:
+  - 192.168.5.134
   selector:
     app: nginx
   ports:

@@ -57,7 +57,7 @@ spec:
         memory: 128Mi
 
   keyspaces:
-  - name: commerce
+  - name: shard1
     turndownPolicy: Immediate
     partitionings:
     - equal:
@@ -109,7 +109,7 @@ spec:
               resources:
                 requests:
                   storage: 2Gi
-  - name: carrafour
+  - name: shard2
     turndownPolicy: Immediate
     partitionings:
     - equal:
@@ -174,7 +174,7 @@ stringData:
     {
       "user": [{
         "UserData": "user",
-        "Password": "iamuser123"
+        "Password": "Iamuser$123"
       }]
     }
   init_db.sql: |
