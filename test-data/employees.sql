@@ -97,6 +97,17 @@ CREATE TABLE salaries (
     PRIMARY KEY (emp_no, from_date)
 ) 
 ; 
+
+CREATE TABLE employees_tmp_group (
+    emp_no      INT             NOT NULL,
+    birth_date  DATE            NOT NULL,
+    first_name  VARCHAR(14)     NOT NULL,
+    last_name   VARCHAR(16)     NOT NULL,
+    gender      ENUM ('M','F')  NOT NULL,    
+    hire_date   DATE            NOT NULL,
+    emp_group   VARCHAR(32)     NOT NULL,
+    PRIMARY KEY (emp_no)
+);
 /*
 CREATE OR REPLACE VIEW dept_emp_latest_date AS
     SELECT emp_no, MAX(from_date) AS from_date, MAX(to_date) AS to_date
