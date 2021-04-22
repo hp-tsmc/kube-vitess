@@ -61,6 +61,14 @@
                     "name": "md5"
                 }
             ]
+        },
+        "employees_tmp_group": {
+            "column_vindexes": [
+                {
+                    "column": "emp_no",
+                    "name": "md5"
+                }
+            ]
         }
         
     }
