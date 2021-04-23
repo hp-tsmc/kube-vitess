@@ -30,9 +30,11 @@ ACID in MongoDB (Transaction)
 - Session (Maybe not)
 - Restrictions
 - Production Considerations
+
 Data Model
 - Data model design 
 - Lockdown models 
+
 Aggregation Framework
 - How it works
 - Methods
