@@ -39,9 +39,10 @@ Aggregation Framework
 - Examples
 - Mapping to SQL Syntax
 
-https://zh.wikipedia.org/wiki/ACID
-https://docs.mongodb.com/manual/core/transactions-production-consideration/
-https://docs.mongodb.com/manual/core/transactions/
-https://developer.mongodb.com/quickstart/golang-multi-document-acid-transactions/
-https://developer.mongodb.com/quickstart/introduction-aggregation-framework/
-https://www.mongodb.com/blog/post/json-schema-validation--locking-down-your-model-the-smart-way
+Ref:
+- https://zh.wikipedia.org/wiki/ACID
+- https://docs.mongodb.com/manual/core/transactions-production-consideration/
+- https://docs.mongodb.com/manual/core/transactions/
+- https://developer.mongodb.com/quickstart/golang-multi-document-acid-transactions/
+- https://developer.mongodb.com/quickstart/introduction-aggregation-framework/
+- https://www.mongodb.com/blog/post/json-schema-validation--locking-down-your-model-the-smart-way
