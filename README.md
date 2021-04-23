@@ -20,21 +20,24 @@ Modify the file like this:
   "storage-driver": "overlay2"
 }
 ```
+
+## MongoDB ACID & Aggregation
+
 ACID in MongoDB (Transaction)
-Single Document
-Read Write Concern
-Transaction
-Session
-Restrictions
-Production Considerations
+- Single Document
+- Read Write Concern
+- Transaction
+- Session (Maybe not)
+- Restrictions
+- Production Considerations
 Data Model
-Data model design 
-Lockdown models 
+- Data model design 
+- Lockdown models 
 Aggregation Framework
-How it works
-Methods
-Examples
-Mapping to SQL Syntax
+- How it works
+- Methods
+- Examples
+- Mapping to SQL Syntax
 
 https://zh.wikipedia.org/wiki/ACID
 https://docs.mongodb.com/manual/core/transactions-production-consideration/
