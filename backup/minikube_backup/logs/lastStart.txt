@@ -1,0 +1,133 @@
+Log file created at: 2021/04/27 18:40:25
+Running on machine: out-linux-01
+Binary: Built with gc go1.16 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0427 18:40:25.108611 2981776 out.go:239] Setting OutFile to fd 1 ...
+I0427 18:40:25.108812 2981776 out.go:286] TERM=xterm,COLORTERM=, which probably does not support color
+I0427 18:40:25.108816 2981776 out.go:252] Setting ErrFile to fd 2...
+I0427 18:40:25.108819 2981776 out.go:286] TERM=xterm,COLORTERM=, which probably does not support color
+I0427 18:40:25.108929 2981776 root.go:308] Updating PATH: /home/bapadmin/.minikube/bin
+I0427 18:40:25.109920 2981776 out.go:246] Setting JSON to false
+I0427 18:40:25.115252 2981776 start.go:108] hostinfo: {"hostname":"out-linux-01","uptime":701661,"bootTime":1618818365,"procs":199,"os":"linux","platform":"centos","platformFamily":"rhel","platformVersion":"7.6.1810","kernelVersion":"3.10.0-957.12.2.el7.x86_64","kernelArch":"x86_64","virtualizationSystem":"kvm","virtualizationRole":"host","hostId":"66058005-ed03-8f48-99ec-40ec701a69ad"}
+I0427 18:40:25.115442 2981776 start.go:118] virtualization: kvm host
+I0427 18:40:25.135120 2981776 out.go:129] * minikube v1.18.1 on Centos 7.6.1810
+I0427 18:40:25.135850 2981776 driver.go:323] Setting default libvirt URI to qemu:///system
+I0427 18:40:25.136505 2981776 exec_runner.go:52] Run: systemctl --version
+I0427 18:40:25.252390 2981776 out.go:129] * Using the none driver based on existing profile
+I0427 18:40:25.252474 2981776 start.go:276] selected driver: none
+I0427 18:40:25.252486 2981776 start.go:718] validating driver "none" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.18@sha256:ddd0c02d289e3a6fb4bba9a94435840666f4eb81484ff3e707b69c1c484aa45e Memory:6000 CPUs:2 DiskSize:20000 VMDriver: Driver:none HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.99.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.20.2 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[] ShouldLoadCachedImages:false EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name:m01 IP:192.168.5.134 Port:8443 KubernetesVersion:v1.20.2 ControlPlane:true Worker:true}] Addons:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] Network: MultiNodeRequested:false}
+I0427 18:40:25.252631 2981776 start.go:729] status for none: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc:}
+I0427 18:40:25.255471 2981776 start_flags.go:395] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.18@sha256:ddd0c02d289e3a6fb4bba9a94435840666f4eb81484ff3e707b69c1c484aa45e Memory:6000 CPUs:2 DiskSize:20000 VMDriver: Driver:none HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.99.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.20.2 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[] ShouldLoadCachedImages:false EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name:m01 IP:192.168.5.134 Port:8443 KubernetesVersion:v1.20.2 ControlPlane:true Worker:true}] Addons:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] Network: MultiNodeRequested:false}
+I0427 18:40:25.272561 2981776 out.go:129] * Starting control plane node minikube in cluster minikube
+I0427 18:40:25.272767 2981776 profile.go:148] Saving config to /home/bapadmin/.minikube/profiles/minikube/config.json ...
+I0427 18:40:25.273165 2981776 cache.go:185] Successfully downloaded all kic artifacts
+I0427 18:40:25.273231 2981776 start.go:313] acquiring machines lock for minikube: {Name:mkd2916db4a3b02c7566c60add5aeb8f4559890a Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0427 18:40:25.274609 2981776 start.go:317] acquired machines lock for "minikube" in 1.345003ms
+I0427 18:40:25.274643 2981776 start.go:93] Skipping create...Using existing machine configuration
+I0427 18:40:25.274659 2981776 fix.go:55] fixHost starting: m01
+W0427 18:40:25.275963 2981776 none.go:130] unable to get port: "minikube" does not appear in /home/bapadmin/.kube/config
+I0427 18:40:25.275984 2981776 api_server.go:146] Checking apiserver status ...
+I0427 18:40:25.276048 2981776 exec_runner.go:52] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0427 18:40:25.411085 2981776 api_server.go:150] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: exit status 1
+stdout:
+
+stderr:
+I0427 18:40:25.411164 2981776 exec_runner.go:52] Run: sudo systemctl is-active --quiet service kubelet
+I0427 18:40:25.508320 2981776 fix.go:108] recreateIfNeeded on minikube: state=Stopped err=<nil>
+W0427 18:40:25.508347 2981776 fix.go:134] unexpected machine state, will restart: <nil>
+I0427 18:40:25.518663 2981776 out.go:129] * Restarting existing none bare metal machine for "minikube" ...
+I0427 18:40:25.520919 2981776 profile.go:148] Saving config to /home/bapadmin/.minikube/profiles/minikube/config.json ...
+I0427 18:40:25.521121 2981776 start.go:267] post-start starting for "minikube" (driver="none")
+I0427 18:40:25.521128 2981776 start.go:277] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I0427 18:40:25.521203 2981776 exec_runner.go:52] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I0427 18:40:25.610183 2981776 main.go:121] libmachine: Couldn't set key CPE_NAME, no corresponding struct field found
+I0427 18:40:25.610231 2981776 main.go:121] libmachine: Couldn't set key , no corresponding struct field found
+I0427 18:40:25.610248 2981776 main.go:121] libmachine: Couldn't set key CENTOS_MANTISBT_PROJECT, no corresponding struct field found
+I0427 18:40:25.610257 2981776 main.go:121] libmachine: Couldn't set key CENTOS_MANTISBT_PROJECT_VERSION, no corresponding struct field found
+I0427 18:40:25.610323 2981776 main.go:121] libmachine: Couldn't set key REDHAT_SUPPORT_PRODUCT, no corresponding struct field found
+I0427 18:40:25.610333 2981776 main.go:121] libmachine: Couldn't set key REDHAT_SUPPORT_PRODUCT_VERSION, no corresponding struct field found
+I0427 18:40:25.610340 2981776 main.go:121] libmachine: Couldn't set key , no corresponding struct field found
+I0427 18:40:25.619192 2981776 out.go:129] * OS release is CentOS Linux 7 (Core)
+I0427 18:40:25.619241 2981776 filesync.go:118] Scanning /home/bapadmin/.minikube/addons for local assets ...
+I0427 18:40:25.619329 2981776 filesync.go:118] Scanning /home/bapadmin/.minikube/files for local assets ...
+I0427 18:40:25.619375 2981776 start.go:270] post-start completed in 98.237796ms
+I0427 18:40:25.619384 2981776 fix.go:95] none is local, skipping auth/time setup (requires ssh)
+I0427 18:40:25.619387 2981776 fix.go:57] fixHost completed within 344.736988ms
+I0427 18:40:25.619391 2981776 start.go:80] releasing machines lock for "minikube", held for 344.772588ms
+I0427 18:40:25.620037 2981776 exec_runner.go:52] Run: sudo systemctl is-active --quiet service containerd
+I0427 18:40:25.620086 2981776 exec_runner.go:52] Run: curl -sS -m 2 https://k8s.gcr.io/
+I0427 18:40:25.717206 2981776 exec_runner.go:52] Run: /bin/bash -c "sudo mkdir -p /etc && printf %s "runtime-endpoint: unix:///var/run/dockershim.sock
+image-endpoint: unix:///var/run/dockershim.sock
+" | sudo tee /etc/crictl.yaml"
+I0427 18:40:25.928802 2981776 exec_runner.go:52] Run: sudo systemctl cat docker.service
+I0427 18:40:26.030380 2981776 exec_runner.go:52] Run: sudo systemctl daemon-reload
+I0427 18:40:26.247211 2981776 exec_runner.go:52] Run: sudo systemctl restart docker
+I0427 18:40:26.926173 2981776 exec_runner.go:52] Run: docker version --format {{.Server.Version}}
+I0427 18:40:27.009740 2981776 out.go:150] * Preparing Kubernetes v1.20.2 on Docker  ...
+I0427 18:40:27.010367 2981776 exec_runner.go:52] Run: grep 127.0.0.1	host.minikube.internal$ /etc/hosts
+I0427 18:40:27.013352 2981776 preload.go:97] Checking if preload exists for k8s version v1.20.2 and runtime docker
+I0427 18:40:27.282969 2981776 preload.go:122] Found remote preload: https://storage.googleapis.com/minikube-preloaded-volume-tarballs/preloaded-images-k8s-v9-v1.20.2-docker-overlay2-amd64.tar.lz4
+I0427 18:40:27.283081 2981776 exec_runner.go:52] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0427 18:40:27.353287 2981776 exec_runner.go:52] Run: sudo cat /var/lib/docker/image/overlay2/repositories.json
+I0427 18:40:27.457105 2981776 store.go:62] repositories.json doesn't exist: sudo cat /var/lib/docker/image/overlay2/repositories.json: exit status 1
+stdout:
+
+stderr:
+cat: /var/lib/docker/image/overlay2/repositories.json: No such file or directory
+I0427 18:40:27.457195 2981776 exec_runner.go:52] Run: which lz4
+I0427 18:40:27.458617 2981776 kubeadm.go:880] preload failed, will try to load cached images: getting file asset: open: open /home/bapadmin/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v9-v1.20.2-docker-overlay2-amd64.tar.lz4: no such file or directory
+I0427 18:40:27.458696 2981776 exec_runner.go:52] Run: docker info --format {{.CgroupDriver}}
+I0427 18:40:27.613209 2981776 out.go:129] 
+W0427 18:40:27.613537 2981776 out.go:191] X Exiting due to K8S_INSTALL_FAILED: updating control plane: generating kubeadm cfg: getting cgroup driver: docker info --format : exit status 2
+stdout:
+
+stderr:
+panic: reflect: indirection through nil pointer to embedded struct [recovered]
+	panic: reflect: indirection through nil pointer to embedded struct
+
+goroutine 1 [running]:
+text/template.errRecover(0xc00059b2a8)
+	/usr/local/go/src/text/template/exec.go:170 +0x1b5
+panic(0x5555857837a0, 0x555585ac4ae0)
+	/usr/local/go/src/runtime/panic.go:679 +0x1b6
+reflect.Value.FieldByIndex(0x55558593c780, 0xc00004ffc0, 0x99, 0xc0001c5880, 0x2, 0x2, 0x0, 0x555585b7bda0, 0x5555857837a0)
+	/usr/local/go/src/reflect/value.go:883 +0x39e
+text/template.(*state).evalField(0xc00059b228, 0x55558593c780, 0xc00004ffc0, 0x99, 0x7ffd4c08e590, 0xc, 0x555585b4cba0, 0xc0001cea20, 0xc0003c7e40, 0x1, ...)
+	/usr/local/go/src/text/template/exec.go:605 +0x475
+text/template.(*state).evalFieldChain(0xc00059b228, 0x55558593c780, 0xc00004ffc0, 0x99, 0x55558593c780, 0xc00004ffc0, 0x99, 0x555585b4cba0, 0xc0001cea20, 0xc0003c7e30, ...)
+	/usr/local/go/src/text/template/exec.go:558 +0x222
+text/template.(*state).evalFieldNode(0xc00059b228, 0x55558593c780, 0xc00004ffc0, 0x99, 0xc0001cea20, 0xc0003c7e40, 0x1, 0x1, 0x5555858284e0, 0x555586b789c8, ...)
+	/usr/local/go/src/text/template/exec.go:522 +0x115
+text/template.(*state).evalCommand(0xc00059b228, 0x55558593c780, 0xc00004ffc0, 0x99, 0xc0001ce9f0, 0x5555858284e0, 0x555586b789c8, 0x99, 0xd0, 0x55558591c360, ...)
+	/usr/local/go/src/text/template/exec.go:460 +0x79c
+text/template.(*state).evalPipeline(0xc00059b228, 0x55558593c780, 0xc00004ffc0, 0x99, 0xc0003d6360, 0xc0001d2938, 0xc0001a52b0, 0xc00059b0e0)
+	/usr/local/go/src/text/template/exec.go:434 +0x11c
+text/template.(*state).walk(0xc00059b228, 0x55558593c780, 0xc00004ffc0, 0x99, 0x555585b4ca20, 0xc0001cea50)
+	/usr/local/go/src/text/template/exec.go:258 +0x49d
+text/template.(*state).walk(0xc00059b228, 0x55558593c780, 0xc00004ffc0, 0x99, 0x555585b4cc60, 0xc0002461b0)
+	/usr/local/go/src/text/template/exec.go:266 +0x144
+text/template.(*Template).execute(0xc00004ff40, 0x555585ae64a0, 0xc000257ad0, 0x55558593c780, 0xc00004ffc0, 0x0, 0x0)
+	/usr/local/go/src/text/template/exec.go:221 +0x20c
+text/template.(*Template).Execute(...)
+	/usr/local/go/src/text/template/exec.go:204
+github.com/docker/cli/cli/command/system.formatInfo(0x555585b76ac0, 0xc00033c750, 0x0, 0xc0003c7d50, 0x1, 0x1, 0xc0002fb360, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/cli/cli/command/system/info.go:490 +0x1f5
+github.com/docker/cli/cli/command/system.runInfo(0xc00035f340, 0x555585b76ac0, 0xc00033c750, 0xc0005745c0, 0x0, 0x0)
+	/go/src/github.com/docker/cli/cli/command/system/info.go:87 +0x37c
+github.com/docker/cli/cli/command/system.NewInfoCommand.func1(0xc00035f340, 0xc0001cc3e0, 0x0, 0x2, 0x0, 0x0)
+	/go/src/github.com/docker/cli/cli/command/system/info.go:53 +0x48
+github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).execute(0xc00035f340, 0xc00022ebe0, 0x2, 0x2, 0xc00035f340, 0xc00022ebe0)
+	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:850 +0x462
+github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xc0002b82c0, 0xc00022ebd0, 0x3, 0x3)
+	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:958 +0x34b
+github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).Execute(...)
+	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:895
+main.runDocker(0xc00033c750, 0x555585ae8ac0, 0xc0000e6010)
+	/go/src/github.com/docker/cli/cmd/docker/docker.go:287 +0x1d3
+main.main()
+	/go/src/github.com/docker/cli/cmd/docker/docker.go:298 +0xf3
+
+W0427 18:40:27.613697 2981776 out.go:191] * 
+W0427 18:40:27.613749 2981776 out.go:191] * If the above advice does not help, please let us know: 
+W0427 18:40:27.613803 2981776 out.go:191]   - https://github.com/kubernetes/minikube/issues/new/choose

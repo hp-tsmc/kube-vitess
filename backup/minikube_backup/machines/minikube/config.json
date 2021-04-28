@@ -1,0 +1,69 @@
+{
+    "ConfigVersion": 3,
+    "Driver": {
+        "IPAddress": "192.168.5.134",
+        "MachineName": "minikube",
+        "SSHUser": "",
+        "SSHPort": 0,
+        "SSHKeyPath": "",
+        "StorePath": "/home/bapadmin/.minikube",
+        "SwarmMaster": false,
+        "SwarmHost": "",
+        "SwarmDiscovery": "",
+        "URL": "tcp://192.168.5.134:2376"
+    },
+    "DriverName": "none",
+    "HostOptions": {
+        "Driver": "",
+        "Memory": 0,
+        "Disk": 0,
+        "EngineOptions": {
+            "ArbitraryFlags": null,
+            "Dns": null,
+            "GraphDir": "",
+            "Env": [],
+            "Ipv6": false,
+            "InsecureRegistry": [
+                "10.96.0.0/12"
+            ],
+            "Labels": null,
+            "LogLevel": "",
+            "StorageDriver": "",
+            "SelinuxEnabled": false,
+            "TlsVerify": false,
+            "RegistryMirror": null,
+            "InstallURL": "https://get.docker.com"
+        },
+        "SwarmOptions": {
+            "IsSwarm": false,
+            "Address": "",
+            "Discovery": "",
+            "Agent": false,
+            "Master": false,
+            "Host": "",
+            "Image": "",
+            "Strategy": "",
+            "Heartbeat": 0,
+            "Overcommit": 0,
+            "ArbitraryFlags": null,
+            "ArbitraryJoinFlags": null,
+            "Env": null,
+            "IsExperimental": false
+        },
+        "AuthOptions": {
+            "CertDir": "/home/bapadmin/.minikube",
+            "CaCertPath": "/home/bapadmin/.minikube/certs/ca.pem",
+            "CaPrivateKeyPath": "/home/bapadmin/.minikube/certs/ca-key.pem",
+            "CaCertRemotePath": "",
+            "ServerCertPath": "/home/bapadmin/.minikube/machines/server.pem",
+            "ServerKeyPath": "/home/bapadmin/.minikube/machines/server-key.pem",
+            "ClientKeyPath": "/home/bapadmin/.minikube/certs/key.pem",
+            "ServerCertRemotePath": "",
+            "ServerKeyRemotePath": "",
+            "ClientCertPath": "/home/bapadmin/.minikube/certs/cert.pem",
+            "ServerCertSANs": null,
+            "StorePath": "/home/bapadmin/.minikube"
+        }
+    },
+    "Name": "minikube"
+}
